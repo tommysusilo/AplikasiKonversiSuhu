@@ -68,7 +68,7 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel2" max="32767" attributes="0"/>
                               <Component id="jLabel3" pref="90" max="32767" attributes="0"/>
@@ -80,7 +80,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="rbToCelcius" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="18" max="32767" attributes="0"/>
-                                  <Component id="rbToFahrenheit1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rbToFahrenheit" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="rbToReamur" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -90,10 +90,10 @@
                           </Group>
                           <EmptySpace pref="19" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel5" max="32767" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="txtResult" min="-2" pref="288" max="-2" attributes="0"/>
+                          <Component id="txtResult" min="-2" pref="312" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -119,7 +119,7 @@
                       <Component id="rbToCelcius" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="rbToReamur" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="rbToKelvin" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="rbToFahrenheit1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rbToFahrenheit" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -135,6 +135,9 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JTextField" name="txtResult">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtResultKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="cbKonversi">
           <Properties>
@@ -212,6 +215,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="suhu">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="suhuKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
@@ -221,7 +227,7 @@
             <Property name="text" type="java.lang.String" value="HASIL"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="rbToFahrenheit1">
+        <Component class="javax.swing.JRadioButton" name="rbToFahrenheit">
           <Properties>
             <Property name="text" type="java.lang.String" value="Fahrenheit"/>
           </Properties>
