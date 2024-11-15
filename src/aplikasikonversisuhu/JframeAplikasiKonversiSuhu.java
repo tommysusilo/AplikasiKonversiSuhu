@@ -242,7 +242,12 @@ public class JframeAplikasiKonversiSuhu extends javax.swing.JFrame {
                 hasil = "Celcius: " + toCelcius(suhu1);
             } else if (rbToFahrenheit.isSelected()) {
                 hasil = "Fahrenheit: " + toFahrenheit(suhu1);
-            }  
+            } 
+            else if (rbToReamur.isSelected()) {
+                hasil = "Reamur: " + toReamur(suhu1);
+            } else if (rbToKelvin.isSelected()) {
+                hasil = "Kelvin: " + toKelvin(suhu1);
+            }
             
             txtResult.setText(hasil);
         } catch (NumberFormatException ex) {
@@ -266,6 +271,26 @@ public class JframeAplikasiKonversiSuhu extends javax.swing.JFrame {
             case 2: return (suhu1 * 9 / 5) + 32; // Reamur to Fahrenheit
             case 3: return (suhu1 - 273.15) * 9 / 5 + 32; // Kelvin to Fahrenheit
             default: return suhu1; // Fahrenheit to Fahrenheit
+        }
+    }
+ 
+    
+    // Konversi dari Celcius ke Reamur
+    private double toReamur(double suhu1) {
+        switch (cbKonversi.getSelectedIndex()) {
+            case 0: return suhu1 * 4 / 5; // Celcius to Reamur
+            case 1: return (suhu1 - 32) * 4 / 9; // Fahrenheit to Reamur
+            case 3: return (suhu1 - 273.15) * 4 / 5; // Kelvin to Reamur
+            default: return suhu1; // Reamur to Reamur
+        }
+    }
+    
+        private double toKelvin(double suhu1) {
+        switch (cbKonversi.getSelectedIndex()) {
+            case 0: return suhu1 + 273.15; // Celcius to Kelvin
+            case 1: return (suhu1 - 32) * 5 / 9 + 273.15; // Fahrenheit to Kelvin
+            case 2: return (suhu1 * 5 / 4) + 273.15; // Reamur to Kelvin
+            default: return suhu1; // Kelvin to Kelvin
         }
     }
     
